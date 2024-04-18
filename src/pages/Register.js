@@ -21,7 +21,7 @@ function Register() {
       message.error("Password is very lengthy to remember");
     } else if (values.password.length < 8) {
       message.error("Password is weak");
-    } else if (values.phone.length > 13 || values.phone.length < 11) {
+    } else if (values.phone.length > 13 || values.phone.length < 10) {
       message.error("Invalid Phone Number");
     }
   }
