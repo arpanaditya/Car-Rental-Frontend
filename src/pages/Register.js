@@ -11,17 +11,17 @@ function Register() {
   function onFinish(values) {
     if (
       values.password.length >= 8 &&
-      values.password.length < 23 &&
+      values.password.length <= 23 &&
       values.phone.length >= 10 &&
-      values.phone.length < 13
+      values.phone.length <= 13
     ) {
       dispatch(userRegister(values));
       console.log(values);
-    } else if (values.password.length > 24) {
+    } else if (values.password.length >= 24) {
       message.error("Password is very lengthy to remember");
-    } else if (values.password.length < 8) {
+    } else if (values.password.length <= 8) {
       message.error("Password is weak");
-    } else if (values.phone.length > 13 || values.phone.length < 10) {
+    } else if (values.phone.length >= 13 || values.phone.length <= 10) {
       message.error("Invalid Phone Number");
     }
   }
@@ -41,7 +41,7 @@ function Register() {
               label="Username"
               rules={[{ required: true }]}
             >
-              <input
+              <Input
                 type="text"
                 placeholder="Enter your username..."
                 className="p-2"
@@ -52,7 +52,7 @@ function Register() {
               label="Email Address"
               rules={[{ required: true }]}
             >
-              <input
+              <Input
                 type="email"
                 placeholder="Enter your email address..."
                 className="p-2"
@@ -63,14 +63,14 @@ function Register() {
               label="Password"
               rules={[{ required: true }]}
             >
-              <input
+              <Input
                 type="password"
                 placeholder="Enter your password..."
                 className="p-2"
               />
             </Form.Item>
             <Form.Item name="phone" label="Phone" rules={[{ required: true }]}>
-              <input
+              <Input
                 type="tel"
                 placeholder="Enter your phone number..."
                 className="p-2"
