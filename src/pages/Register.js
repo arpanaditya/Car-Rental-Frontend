@@ -12,7 +12,7 @@ function Register() {
     if (
       values.password.length >= 8 &&
       values.password.length < 23 &&
-      values.phone.length >= 11 &&
+      values.phone.length >= 10 &&
       values.phone.length < 13
     ) {
       dispatch(userRegister(values));
