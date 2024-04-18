@@ -6,7 +6,7 @@ export const userLogin = (reqObj) => async (dispatch) => {
 
   try {
     const response = await axios.post(
-      "https://vast-teal-cod-hat.cyclic.app//api/users/login",
+      "https://vast-teal-cod-hat.cyclic.app/api/users/login",
       reqObj
     );
     const { admin, username, _id } = response.data;
@@ -28,7 +28,7 @@ export const userRegister = (reqObj) => async (dispatch) => {
 
   try {
     const response = await axios.post(
-      "https://vast-teal-cod-hat.cyclic.app//api/users/register",
+      "https://vast-teal-cod-hat.cyclic.app/api/users/register",
       reqObj
     );
     message.success("Registration successfull");
