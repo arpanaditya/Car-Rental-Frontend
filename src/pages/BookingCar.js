@@ -206,7 +206,7 @@ function BookingCar() {
                     billingAddress={true}
                     currency="pkr"
                     amount={totalAmount * 100}
-                    stripeKey="pk_test_51K8lJeSGkXsHpk6s64EtVo37lQmikIps217LhE2fmpwRMj2Ro0iKQvYXcFkMBHjjM4Z6BC5uvxV8XsTbKQFfbQ5y000eSg9RUb"
+                    stripeKey="pk_test_51P6rMrSJFcrhL6zYezE2Aix2AVOeDSq8nmYOLyFCZV4d6oBRu68HRiuXmtG2zuOQx6PYrlvgtyFyTVCGeajtM15R00NeLS2w2F"
                   >
                     <button
                       className="btn1"
