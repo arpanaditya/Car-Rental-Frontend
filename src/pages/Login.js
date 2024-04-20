@@ -26,7 +26,7 @@ function Login() {
               label="Email Address"
               rules={[{ required: true }]}
             >
-              <input
+              <Input
                 placeholder="Enter your email address..."
                 className="p-2"
               />
@@ -36,7 +36,7 @@ function Login() {
               label="Password"
               rules={[{ required: true }]}
             >
-              <input
+              <Input
                 type="password"
                 placeholder="Enter your password..."
                 className="p-2"

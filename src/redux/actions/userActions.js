@@ -31,7 +31,7 @@ export const userRegister = (reqObj) => async (dispatch) => {
       "https://vast-teal-cod-hat.cyclic.app/api/users/register",
       reqObj
     );
-    message.success("Registration successfull");
+    message.success("Registration successful");
     setTimeout(() => {
       window.location.href = "/login";
     }, 500);

@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 import React, { useState, useEffect } from "react";
 import DefaultLayout from "../components/DefaultLayout";
 import { useDispatch, useSelector } from "react-redux";
@@ -111,7 +112,7 @@ function UserBookings() {
                 );
               })
             : bookings
-                .filter((o) => o.user._id == user._id)
+                .filter((o) => o.user._id === user._id)
                 .map((booking) => {
                   return (
                     <Row

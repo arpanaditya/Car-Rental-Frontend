@@ -41,7 +41,7 @@ function Home() {
         var temp = [];
         var filterCars = [];
         for (var car of cars) {
-          if (car.bookedTimeSlots.length == 0) {
+          if (car.bookedTimeSlots.length === 0) {
             temp.push(car);
           } else {
             for (var booking of car.bookedTimeSlots) {
@@ -111,7 +111,7 @@ function Home() {
           />
         </Col>
       </Row>
-      {loading == true && <Spinner />}
+      {loading === true && <Spinner />}
       {from && to && (
         <Row justify="center" gutter={[24, 16]}>
           {totalCars.map((car) => {

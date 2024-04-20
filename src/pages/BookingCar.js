@@ -30,11 +30,11 @@ function BookingCar() {
   const [totalAmount, setTotalAmount] = useState(0);
   const [showModal, setShowModal] = useState(false);
   useEffect(() => {
-    if (cars.length == 0) {
+    if (cars.length === 0) {
       dispatch(getAllCars());
       window.scrollTo({ top: 0, behavior: "smooth" });
     } else {
-      setcar(cars.find((o) => o._id == id));
+      setcar(cars.find((o) => o._id === id));
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
   }, [cars]);
@@ -204,7 +204,7 @@ function BookingCar() {
                     token={onToken}
                     shippingAddress
                     billingAddress={true}
-                    currency="pkr"
+                    currency="inr"
                     amount={totalAmount * 100}
                     stripeKey="pk_test_51P6rMrSJFcrhL6zYezE2Aix2AVOeDSq8nmYOLyFCZV4d6oBRu68HRiuXmtG2zuOQx6PYrlvgtyFyTVCGeajtM15R00NeLS2w2F"
                   >
@@ -228,7 +228,7 @@ function BookingCar() {
         </Col>
         {car.name && (
           <Modal
-            visible={showModal}
+            open={showModal}
             closable={false}
             footer={false}
             title="Booked time slots"

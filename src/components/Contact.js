@@ -17,7 +17,7 @@ const Contact = () => {
       )
       .then(
         (result) => {
-          if (result.text == "OK") {
+          if (result.text === "OK") {
             message.success("Message Sent Successfully");
           }
         },

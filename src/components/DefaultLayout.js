@@ -1,5 +1,5 @@
 import React from "react";
-import { Menu, Dropdown, Button, Space } from "antd";
+import { Menu, Dropdown, Button } from "antd";
 import Logoo from "../images/logo.png";
 import { Link } from "react-router-dom";
 function DefaultLayout(props) {
@@ -73,7 +73,7 @@ function DefaultLayout(props) {
             </div>
           </Link>
           <Dropdown overlay={menu} placement="bottomCenter">
-            <Button>{"Wellcome " + user.username}</Button>
+            <Button>{"Welcome " + user.username}</Button>
           </Dropdown>
           {/* <button>user</button> */}
         </div>

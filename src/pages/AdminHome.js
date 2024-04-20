@@ -54,7 +54,7 @@ function AdminHome() {
         </div>
       )}
 
-      {loading == true && <Spinner />}
+      {loading === true && <Spinner />}
       {user.admin ? (
         <Row justify="center" gutter={16}>
           {totalCars.map((car) => {
